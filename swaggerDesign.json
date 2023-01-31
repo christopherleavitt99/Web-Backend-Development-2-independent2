@@ -4,9 +4,6 @@
       "description": "This is an api server for a to do list builder website.\n",
       "version": "1.0.0",
       "title": "To Do List",
-      "contact": {
-        "email": "birchn@byui.edu"
-      },
       "license": {
         "name": "Apache 2.0",
         "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -14,193 +11,48 @@
     },
     "host": "chrisleavitt5.onrender.com",
     "basePath": "/",
-    "tags": [
-      {
-        "name": "theme",
-        "description": "Operations about themes"
-      },
-      {
-        "name": "user",
-        "description": "Operations about user"
-      },
-      {
-        "name": "Not Yet Implemented",
-        "description": "These API endpoints are designed and will be created in the near future"
-      }
-    ],
     "schemes": ["https"],
     "paths": {
-      "/theme/{themeName}": {
+      "/todo/": {
         "get": {
-          "tags": ["theme"],
-          "summary": "Finds Themes by name",
-          "description": "Each theme has a unique name, this will basically find a single theme by an exact name almost like an id",
-          "operationId": "findThemeByName",
+          "description": "",
           "produces": ["application/json"],
-          "parameters": [
-            {
-              "name": "themeName",
-              "in": "path",
-              "description": "Theme name string is required and functions as id",
-              "required": true,
-              "type": "string",
-              "items": {
-                "type": "string",
-                "default": "available"
-              },
-              "collectionFormat": "csv"
-            }
-          ],
-          "security": [
-            {
-              "petstore_auth": ["write:pets", "read:pets"]
-            }
-          ],
+          "parameters": [],
           "responses": {
             "200": {
               "description": "successful operation",
               "schema": {
                 "type": "object"
               }
-            },
-            "400": {
-              "description": "Invalid theme name value"
-            }
-          }
-        }
-      },
-      "/user": {
-        "post": {
-          "tags": ["user"],
-          "summary": "Create user",
-          "description": "This is for when a user creates an account.",
-          "operationId": "createUser",
-          "produces": ["application/json"],
-          "parameters": [
-            {
-              "in": "body",
-              "name": "body",
-              "description": "Created user object",
-              "required": true,
-              "schema": {
-                "$ref": "#/definitions/Credentials"
-              }
-            }
-          ],
-          "responses": {
-            "201": {
-              "description": "successfully created user",
-              "schema": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "integer",
-                    "format": "int64"
-                  },
-                  "name": {
-                    "type": "string",
-                    "example": "Nike Theme"
-                  }
-                }
-              }
-            },
-            "400": {
-              "description": "Invalid theme name value"
-            }
-          }
-        }
-      },
-      "/user/login": {
-        "get": {
-          "tags": ["Not Yet Implemented"],
-          "summary": "Logs user into the system",
-          "operationId": "loginUser",
-          "produces": ["application/json"],
-          "parameters": [
-            {
-              "name": "username",
-              "in": "query",
-              "description": "The user name for login",
-              "required": true,
-              "type": "string"
-            },
-            {
-              "name": "password",
-              "in": "query",
-              "description": "The password for login in clear text",
-              "required": true,
-              "type": "string"
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "successful operation",
-              "headers": {
-                "X-Rate-Limit": {
-                  "type": "integer",
-                  "format": "int32",
-                  "description": "calls per hour allowed by the user"
-                },
-                "X-Expires-After": {
-                  "type": "string",
-                  "format": "date-time",
-                  "description": "date in UTC when token expires"
-                }
-              },
-              "schema": {
-                "type": "string"
-              }
-            },
-            "400": {
-              "description": "Invalid username/password supplied"
-            }
-          }
-        }
-      },
-      "/user/logout": {
-        "get": {
-          "tags": ["Not Yet Implemented"],
-          "summary": "Logs out current logged in user session",
-          "operationId": "logoutUser",
-          "produces": ["application/json"],
-          "parameters": [],
-          "responses": {
-            "default": {
-              "description": "successful operation"
-            }
-          }
-        }
-      },
-      "/user/{username}": {
-        "get": {
-          "tags": ["user"],
-          "summary": "Get user by user name",
-          "operationId": "getUserByName",
-          "produces": ["application/json"],
-          "parameters": [
-            {
-              "name": "username",
-              "in": "path",
-              "description": "The name that needs to be fetched.",
-              "required": true,
-              "type": "string"
-            }
-          ],
-          "responses": {
-            "200": {
-              "description": "successful operation",
-              "schema": {
-                "$ref": "#/definitions/User"
-              }
-            },
-            "400": {
-              "description": "Invalid username supplied"
-            },
-            "404": {
-              "description": "User not found"
             }
           }
         },
+        "post": {
+            "description": "",
+            "parameters": [
+                {
+                    "name": "body",
+                    "in": "body",
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "listItem": {
+                                "example": "Make To Do list"
+                            }
+                        }
+                    }
+                }
+            ],
+            "responses": {
+                "201":{
+                    "description": "Created"
+                },
+                "500":{
+                    "description": "Internal Server Error"
+                }
+            }
+        }
+      },
         "put": {
           "tags": ["Not Yet Implemented"],
           "summary": "Updated user",
