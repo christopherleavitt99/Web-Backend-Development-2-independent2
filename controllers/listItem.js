@@ -1,43 +1,17 @@
 const db = require('../models');
 const listItem = db.listItem;
 
-exports.create = (req, res) => { 
-
-  const listItem = new listItem(req.body);
-  listItem
-    .save()
-    .then((data) => {
-      console.log(data);
-      res.status(201).send(data);
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: err.message || 'Some error occurred while creating the list.'
-      });
-    });
-};
-
-exports.getAll = (req, res) => {
-  listItem.find({})
-    .then((data) => {
-      res.send(data);
-    })
-    .catch((err) => {
-      res.status(500).send({
-        message: err.message || 'Some error occurred while retrieving list.'
-      });
-    });
-};
-
 exports.getlistItem = (req, res) => {
-  const listItem = req.params.listItem;
-  listItem.find({ listItem: listItem })
+  const themeName = req.params.themeName;
+  listItem.find({ themeName: themeName })
     .then((data) => {
-      res.send(data);
+      if (!data) res.status(404).send({ message: 'Not found theme with name: ' + themeName });
+      else res.send(data[0]);
     })
     .catch((err) => {
       res.status(500).send({
-        message: err.message || 'Some error occurred while retrieving list.'
+        message: 'Error retrieving theme with themeName=' + themeName,
+        error: err
       });
     });
 };
