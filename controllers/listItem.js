@@ -1,9 +1,7 @@
 const db = require('../models');
 const listItem = db.listItem;
 
-exports.create = (req, res) => {
-  // Validate request
- 
+exports.create = (req, res) => { 
 
   const listItem = new listItem(req.body);
   listItem
