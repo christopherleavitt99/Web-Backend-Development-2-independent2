@@ -374,25 +374,7 @@
           "name": {
             "type": "string",
             "example": ""
-          },
-          "fontSize": {
-            "type": "integer",
-            "example": 18
-          },
-          "fontFamily": {
-            "type": "string",
-            "example": "futura"
-          },
-          "inspiration": {
-            "type": "string",
-            "example": "https://www.nike.com/"
-          },
-          "colors": {
-            "type": "array",
-            "example": ["", "#111", "#fff", "#F5F3EE", "#757575", "#7e7e7e", ", ", ", ", ""],
-            "items": {
-              "type": "string"
-            }
+          }
           }
         }
       },
@@ -585,5 +567,4 @@
       }
     }
   }
-}
 }
