@@ -47,7 +47,41 @@
               "description": "Invalid listItem name value"
             }
           }
-        }
+        },
+        "post": {
+        "tags": ["listItem"],
+        "summary": "Create To Do List",
+        "description": "This is for when a user creates a list item.",
+        "operationId": "createlistItem",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "description": "Created user object",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Credentials"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "successfully created user",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "format": "int64"
+                },
+                "name": {
+                  "type": "string",
+                  "example": ""
+                }
+              }
+            }
+          }
       },
       "/user": {
         "post": {
@@ -551,3 +585,5 @@
       }
     }
   }
+}
+}
