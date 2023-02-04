@@ -13,7 +13,7 @@
     "basePath": "/",
     "schemes": ["https"],
     "paths": {
-      "/todo/{listItemName}": {
+      "/todo/": {
         "get": {
           "description": "",
           "produces": ["application/json"],
