@@ -61,7 +61,6 @@
             "description": "Created user object",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/Credentials"
             }
           }
         ],
@@ -97,7 +96,6 @@
               "description": "Created user object",
               "required": true,
               "schema": {
-                "$ref": "#/definitions/Credentials"
               }
             }
           ],
@@ -204,7 +202,6 @@
             "200": {
               "description": "successful operation",
               "schema": {
-                "$ref": "#/definitions/User"
               }
             },
             "400": {
@@ -235,7 +232,6 @@
               "description": "Updated user object",
               "required": true,
               "schema": {
-                "$ref": "#/definitions/User"
               }
             }
           ],
@@ -289,8 +285,7 @@
             "200": {
               "description": "successful operation",
               "schema": {
-                "type": "Array",
-                "$ref": "#/definitions/User"
+                "type": "Array"
               }
             },
             "500": {
@@ -311,7 +306,6 @@
               "description": "Created user object",
               "required": true,
               "schema": {
-                "$ref": "#/definitions/Credentials"
               }
             }
           ],
@@ -319,7 +313,6 @@
             "default": {
               "description": "A User object",
               "schema": {
-                "$ref": "#/definitions/User"
               }
             }
           }
@@ -356,7 +349,6 @@
             "type": "string"
           },
           "info": {
-            "$ref": "#/definitions/User_info"
           },
           "profile": {
             "$ref": "#/definitions/User_profile"
