@@ -1,0 +1,21 @@
+// LOCALHOST
+### Get all To Do list items
+GET http://localhost:8080/todo/
+### Create To Do list item
+POST http://localhost:8080/todo/ HTTP/1.1
+content-type: application/json 
+
+{
+    "listItem": "Make To Do List",
+}
+
+// Render
+### Get all To Do list items
+GET http://chrisleavitt5.onrender.com/todo/
+### Create To Do list item
+POST http://chrisleavitt5.onrender.com/todo/ HTTP/1.1
+content-type: application/json
+
+{
+    "listItem": "Make To Do List",
+}
