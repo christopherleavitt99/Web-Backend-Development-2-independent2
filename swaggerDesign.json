@@ -31,11 +31,6 @@
               "collectionFormat": "csv"
             }
           ],
-          "security": [
-            {
-              "petstore_auth": ["write:pets", "read:pets"]
-            }
-          ],
           "responses": {
             "200": {
               "description": "successful operation",
@@ -63,9 +58,26 @@
             "schema": {
             }
           }
-        ]
+        ],
+        "responses": {
+          "201": {
+            "description": "successfully created list item",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "format": "int64"
+                },
+                "name": {
+                  "type": "string",
+                  "example": ""
+                }
+              }
             }
           }
+        }
       }
     }
-        
+  }
+}
