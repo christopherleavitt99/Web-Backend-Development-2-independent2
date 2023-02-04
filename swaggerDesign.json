@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-      "description": "This is an api server for a to do list builder website.\n",
+      "description": "This is an api server for a to do list.\n",
       "version": "1.0.0",
       "title": "To Do List",
       "license": {
