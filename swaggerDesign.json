@@ -63,26 +63,9 @@
             "schema": {
             }
           }
-        ],
-        "responses": {
-          "201": {
-            "description": "successfully created user",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer",
-                  "format": "int64"
-                },
-                "name": {
-                  "type": "string",
-                  "example": ""
-                }
-              }
+        ]
             }
           }
       }
-          }
-        }
-      }
     }
+        
