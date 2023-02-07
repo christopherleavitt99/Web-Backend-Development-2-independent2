@@ -7,5 +7,6 @@ const db = {};
 db.mongoose = mongoose;
 db.url = dbConfig.url;
 db.listItem = require('./listItem.js')(mongoose);
+db.user = require('./user.js')(mongoose);
 
 module.exports = db;
