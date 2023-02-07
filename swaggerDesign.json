@@ -3,11 +3,7 @@
     "info": {
       "description": "This is an api server for a to do list.\n",
       "version": "1.0.0",
-      "title": "To Do List",
-      "license": {
-        "name": "Apache 2.0",
-        "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
-      }
+      "title": "To Do List"
     },
     "host": "chrisleavitt5.onrender.com",
     "basePath": "/",
