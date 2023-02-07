@@ -3,6 +3,6 @@ const router = express.Router();
 
 const listItemController = require('../controllers/listItem');
 
-router.get('/:listItem', listItemController.getlistItem);
+router.get('/:listItemName', listItemController.getlistItem);
 
 module.exports = router;
