@@ -68,14 +68,13 @@
                       "format": "int64"
                     },
                     "name": {
-                      "type": "string",
-                      "example": "Nike Theme"
+                      "type": "string"
                     }
                   }
                 }
               },
               "400": {
-                "description": "Invalid theme name value"
+                "description": "Invalid listItem name value"
               }
             }
           }
@@ -319,36 +318,14 @@
             }
           }
         },
-        "Theme": {
+        "listItem": {
           "type": "object",
           "required": ["colors", "fontFamily", "fontSize", "name"],
           "properties": {
             "id": {
               "type": "integer",
               "format": "int64"
-            },
-            "name": {
-              "type": "string",
-              "example": "Nike Theme"
-            },
-            "fontSize": {
-              "type": "integer",
-              "example": 18
-            },
-            "fontFamily": {
-              "type": "string",
-              "example": "futura"
-            },
-            "inspiration": {
-              "type": "string",
-              "example": "https://www.nike.com/"
-            },
-            "colors": {
-              "type": "array",
-              "example": ["", "#111", "#fff", "#F5F3EE", "#757575", "#7e7e7e", ", ", ", ", ""],
-              "items": {
-                "type": "string"
-              }
+            }
             }
           }
         },
@@ -382,7 +359,7 @@
             "profileIsPublic": {
               "type": "boolean"
             },
-            "theme_name": {
+            "listItem_name": {
               "type": "string"
             }
           }
@@ -541,4 +518,4 @@
         }
       }
     }
-  }
+  

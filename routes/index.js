@@ -3,6 +3,6 @@ const router = express.Router();
 
 router.use('/', require('./swagger'));
 router.use('/user', require('./user'));
-router.use('/theme', require('./theme'));
+router.use('/listItem', require('./listItem'));
 
 module.exports = router;

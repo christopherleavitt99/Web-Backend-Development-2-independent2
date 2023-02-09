@@ -24,7 +24,7 @@ module.exports = (mongoose) => {
       profileIsPublic: {
         type: Boolean
       },
-      theme_name: {
+      listItem_name: {
         type: String
       },
       info: {
@@ -43,7 +43,7 @@ module.exports = (mongoose) => {
         profileIsPublic: {
           type: Boolean
         },
-        theme_name: {
+        listItem_name: {
           type: String
         }
       },
