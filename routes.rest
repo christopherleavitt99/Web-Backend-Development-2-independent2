@@ -8,6 +8,15 @@ content-type: application/json
 {
     "listItem": "Make To Do List",
 }
+### PUT todo item
+PUT http://localhost:8080/todo/ HTTP/1.1
+content-type: application/json
+
+{
+    "listItem": "Finish project"
+}
+### DELETE list item
+DELETE http://localhost:8080/todo/ HTTP/1.1
 
 // Render
 ### Get all To Do list items
@@ -19,3 +28,12 @@ content-type: application/json
 {
     "listItem": "Make To Do List",
 }
+### PUT todo item
+PUT http://chrisleavitt5.onrender.com/todo/ HTTP/1.1
+content-type: application/json
+
+{
+    "listItem": "Finish project"
+}
+### DELETE list item
+DELETE http://chrisleavitt5.onrender.com/todo/ HTTP/1.1
