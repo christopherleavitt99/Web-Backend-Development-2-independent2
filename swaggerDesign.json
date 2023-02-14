@@ -5,7 +5,7 @@
       "version": "1.0.0",
       "title": "To Do List"
     },
-    "host": "chrisleavitt5.onrender.com",
+    "host": "localhost",
     "basePath": "/",
     "schemes": ["https"],
     "paths": {
