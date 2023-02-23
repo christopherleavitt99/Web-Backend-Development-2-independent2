@@ -5,6 +5,7 @@
         "createlist",
         "futura",
         "getlist",
+        "keyfile",
         "onrender",
         "petstore"
     ]
