@@ -4,13 +4,24 @@ const bodyParser = require('body-parser');
 const port = process.env.PORT || 8080;
 const app = express();
 
-app
-  .use(bodyParser.json())
-  .use((req, res, next) => {
+app.use(bodyParser.json())
+app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   })
-  .use('/', require('./routes.rest'));
+app.use('/', require('./routes'));
+app.use(auth({
+      authRequired: false,
+      auth0Logout: true,
+      ISSUER_BASE_URL: process.env.ISSUER_BASE_URL,
+      CLIENT_ID: process.env.BASE_URL,
+      BASE_URL: process.env.CLIENT_ID,
+      SECRET:process.env.SECRET
+    })
+  );
+app.get('/', (req, res)=>{
+    res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out')
+  })
 
 const db = require('./models');
 db.mongoose
