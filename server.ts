@@ -10,7 +10,7 @@ app
     res.setHeader('Access-Control-Allow-Origin', '*');
     next();
   })
-  .use('/', require('./routes'));
+  .use('/', require('.Web-Backend-Development-2 independent2/routes'));
 
 const db = require('./models');
 db.mongoose
