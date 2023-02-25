@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 
 const port = process.env.PORT || 8080;
 const app = express();
+require('dotenv').config();
+const { auth, requiresAuth } = require('express-openid-connect');
 
 app.use(bodyParser.json())
 app.use((req, res, next) => {
@@ -22,6 +24,9 @@ app.use(auth({
 app.get('/', (req, res)=>{
     res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out')
   })
+app.get('/profile', requiresAuth(), (req, res)=> {
+  res.send(JSON.stringify(req.oidc.user));
+});
 
 const db = require('./models');
 db.mongoose

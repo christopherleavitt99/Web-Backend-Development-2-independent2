@@ -6,6 +6,7 @@
         "futura",
         "getlist",
         "keyfile",
+        "oidc",
         "onrender",
         "petstore"
     ]
