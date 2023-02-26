@@ -3,9 +3,9 @@
 GET http://localhost:8080/todo/
 ### Create To Do list item
 POST http://localhost:8080/todo/ HTTP/1.1
-apiKey: <insert apiKey>
+# apiKey: <insert apiKey>
 Content-Type: application/json
-Authorization: Bearer <insert JWT from callback/payload/viewsourcehere>
+# Authorization: Bearer <insert JWT from callback/payload/viewsourcehere>
 
 {
     "listItem": "Make To Do List",
@@ -25,9 +25,9 @@ DELETE http://localhost:8080/todo/ HTTP/1.1
 GET http://chrisleavitt5.onrender.com/todo/
 ### Create To Do list item
 POST http://chrisleavitt5.onrender.com/todo/ HTTP/1.1
-apiKey: <insert apiKey>
+# apiKey: <insert apiKey>
 Content-Type: application/json
-Authorization: Bearer <insert JWT from callback/payload/viewsourcehere>
+# Authorization: Bearer <insert JWT from callback/payload/viewsourcehere>
 
 {
     "listItem": "Make To Do List",
